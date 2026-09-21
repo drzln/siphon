@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-ninja = {
-      url = "github:pdpartners/nix-ninja";
+      url = "github:pdtpartners/nix-ninja";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
