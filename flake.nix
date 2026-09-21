@@ -26,13 +26,16 @@
       llvm
       zlib
     ];
-  in {
-    packages.${system}.default = nix-ninja.lib.${system}.buildNinjaPackage {
+
+    default = nix-ninja.lib.${system}.buildNinjaPackage {
       pname = "siphon";
       version = "0.1.0";
       src = ./.;
       ninjaFile = "./build.ninja";
       nativeBuildInputs = buildEnvironment;
     };
+  in {
+    inherit default;
+    packages.${system}.default = default;
   };
 }
