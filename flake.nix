@@ -31,7 +31,7 @@
         src = ./.;
         ninjaFile = "./build.ninja";
         nativeBuildInputs = buildEnvironment;
-      }
+      };
     };
-  }
+  };
 }
